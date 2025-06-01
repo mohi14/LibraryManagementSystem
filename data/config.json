@@ -1,0 +1,5 @@
+{
+    "name": "JSON Demo",
+    "version": 1.0,
+    "features": ["cpp", "json", "vscode"]
+}
