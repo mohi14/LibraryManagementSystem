@@ -1,19 +1,34 @@
 #pragma once
-
 #include <string>
 #include <vector>
-
-using namespace std;
+#include <nlohmann/json.hpp>
 
 class User
 {
+private:
+    int id = 0;
+    std::string name;
+    std::string email;
+    std::vector<int> borrowedBooks;
+
 public:
-    int id;
-    string name;
-    vector<int> borrowedBooks;
+    User() = default;
+    User(int id, std::string name, std::string email);
 
-    User(int id, string name);
-    ~User();
+    // Serialization
+    nlohmann::json toJson() const;
+    static User fromJson(const nlohmann::json &j);
 
-    virtual void displayInfo() const;
+    // Getters
+    int getId() const;
+    const std::string& getName() const;
+    const std::string& getemail() const;
+    const std::vector<int>& getBorrowedBooks() const;
+
+    // Book operations
+    void borrowBook(int bookId);
+    void returnBook(int bookId);
+
+    // Display
+    void display() const;
 };

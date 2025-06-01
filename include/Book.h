@@ -1,17 +1,34 @@
 #pragma once
 #include <string>
-
-using namespace std;
+#include <nlohmann/json.hpp>
 
 class Book
 {
+private:
+    int id = 0;
+    std::string title;
+    std::string author;
+    std::string isbn;
+    bool available = true;
+
 public:
-    int id;
-    string title;
-    string author;
-    bool isAvailable;
+    Book() = default;
+    Book(int id, std::string title, std::string author, std::string isbn, bool available = true);
 
-    Book(int id, string title, string author);
+    // Serialization
+    nlohmann::json toJson() const;
+    static Book fromJson(const nlohmann::json &j);
 
+    // Getters
+    int getId() const;
+    const std::string& getTitle() const;
+    const std::string& getAuthor() const;
+    const std::string& getIsbn() const;
+    bool isAvailable() const;
+
+    // Setters
+    void setAvailable(bool available);
+
+    // Display
     void display() const;
 };

@@ -24,6 +24,6 @@ target_link_libraries(LibraryManagementSystem PRIVATE
 )
 
 # Copy data files to build directory (optional)
-# configure_file(data/books.json ${CMAKE_CURRENT_BINARY_DIR}/data/books.json COPYONLY)
+configure_file(data/books.json ${CMAKE_CURRENT_BINARY_DIR}/data/books.json COPYONLY)
 # configure_file(data/users.json ${CMAKE_CURRENT_BINARY_DIR}/data/users.json COPYONLY)
 # configure_file(data/auth.json ${CMAKE_CURRENT_BINARY_DIR}/data/auth.json COPYONLY)

@@ -1,8 +1,11 @@
-#include "Utility.h"
 #include <iostream>
+#include "Library.h"
 
-int main() {
-    auto config = load_json("data/config.json");
-    print_json(config);
+using namespace std;
+
+int main (){
+
+
+cout << "Welcome to the Library Management System"<< endl;
     return 0;
 }
