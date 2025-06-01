@@ -47,6 +47,9 @@
         "unordered_map": "cpp",
         "variant": "cpp",
         "algorithm": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "forward_list": "cpp",
+        "map": "cpp",
+        "span": "cpp"
     }
 }

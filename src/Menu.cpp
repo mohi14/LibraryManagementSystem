@@ -2,6 +2,8 @@
 #include <iostream>
 #include <limits>
 
+using json = nlohmann::json;
+
 Menu::Menu(Library &library) : library_(library) {}
 
 void Menu::run()
@@ -161,12 +163,12 @@ void Menu::handleDataMenuChoice(int choice) {
     switch (choice) {
         case 1: {
             std::string filename = getStringInput("Enter filename to save: ");
-            library_.saveToFile(filename);
+            library_.saveData();
             break;
         }
         case 2: {
             std::string filename = getStringInput("Enter filename to load: ");
-            library_.loadFromFile(filename);
+            library_.loadData();
             break;
         }
         case 3:
