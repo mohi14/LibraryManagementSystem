@@ -22,12 +22,12 @@ public:
     // Getters
     int getId() const;
     const std::string& getName() const;
-    const std::string& getemail() const;
+    const std::string& getEmail() const;
     const std::vector<int>& getBorrowedBooks() const;
 
     // Book operations
     void borrowBook(int bookId);
-    void returnBook(int bookId);
+    bool returnBook(int bookId);
 
     // Display
     void display() const;
