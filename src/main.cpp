@@ -1,11 +1,10 @@
 #include <iostream>
-#include "Library.h"
+#include "Menu.h"
 
-using namespace std;
-
-int main (){
-
-
-cout << "Welcome to the Library Management System"<< endl;
+int main()
+{
+    Library library;
+    Menu menu(library);
+    menu.run();
     return 0;
 }
