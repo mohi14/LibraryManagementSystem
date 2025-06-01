@@ -23,7 +23,8 @@ target_link_libraries(LibraryManagementSystem PRIVATE
     nlohmann_json::nlohmann_json
 )
 
-# Copy data files to build directory (optional)
+# Copy data files to build directory
 configure_file(data/books.json ${CMAKE_CURRENT_BINARY_DIR}/data/books.json COPYONLY)
-# configure_file(data/users.json ${CMAKE_CURRENT_BINARY_DIR}/data/users.json COPYONLY)
+configure_file(data/users.json ${CMAKE_CURRENT_BINARY_DIR}/data/users.json COPYONLY)
+configure_file(data/transactions.json ${CMAKE_CURRENT_BINARY_DIR}/data/transactions.json COPYONLY)
 # configure_file(data/auth.json ${CMAKE_CURRENT_BINARY_DIR}/data/auth.json COPYONLY)

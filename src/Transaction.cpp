@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <iostream>
 
-Transaction::Transaction(int userId, int booId, Type type): userId(userId), bookId(bookId), type(type), timestamp(std::time(nullptr)){}
+Transaction::Transaction(int userId, int bookId, Type type): userId(userId), bookId(bookId), type(type), timestamp(std::time(nullptr)){}
 
 nlohmann::json Transaction::toJson() const{
     return{

@@ -34,6 +34,7 @@ void Menu::handleMainMenuChoice(int choice)
     {
         displayBookMenu();
         int bookChoice = getIntInput("Enter your choice: ");
+        handleBookMenuChoice(bookChoice);
         break;
     }
     case 2:
